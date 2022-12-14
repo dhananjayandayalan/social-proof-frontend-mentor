@@ -8,6 +8,10 @@
   font-size: 62.5%;
 }
 
+img {
+  max-width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,5 +21,12 @@
 
 body {
   min-height: 100vh;
-  font-size: 1.5rem;
+  background-image: url("./images/bg-pattern-top-mobile.svg"), url("./images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat no-repeat;
+  background-position: top left, bottom right;
+}
+
+main {
+  padding: 6rem 2rem;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
