@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+}
+
 :root {
   --accent: hsl(300, 43%, 22%);
   --soft-pink: hsl(333, 80%, 67%);
@@ -12,13 +24,6 @@ img {
   max-width: 100%;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "League Spartan", sans-serif;
-}
-
 body {
   min-height: 100vh;
   background-image: url("./images/bg-pattern-top-mobile.svg"), url("./images/bg-pattern-bottom-mobile.svg");
@@ -27,6 +32,75 @@ body {
 }
 
 main {
-  padding: 6rem 2rem;
+  padding: 8rem 3rem 4rem;
+  min-width: 360px;
   text-align: center;
+}
+
+.hero {
+  padding-bottom: 3rem;
+}
+.hero__title {
+  font-size: 4rem;
+  padding-inline: 3rem;
+  line-height: 0.8;
+  color: var(--accent);
+  padding-bottom: 2rem;
+}
+.hero__description {
+  font-size: 1.7rem;
+}
+
+.ratings {
+  padding-bottom: 4rem;
+}
+.ratings__card {
+  background: var(--text-paragraph-card);
+  padding: 1.5rem 0;
+  border-radius: 5px;
+}
+.ratings__card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.ratings__card__stars img:not(:last-child) {
+  margin-right: 5px;
+}
+.ratings__card__company {
+  font-size: 1.6rem;
+  padding-top: 1rem;
+  color: var(--accent);
+}
+
+.testimonial__card {
+  background: var(--accent);
+  border-radius: 5px;
+  padding: 3rem;
+  padding-top: 4rem;
+  font-size: 1.6rem;
+  color: var(--white);
+}
+.testimonial__card:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.testimonial__card__customer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  font-weight: 700;
+}
+.testimonial__card__customer img {
+  width: 40px;
+  border-radius: 50%;
+}
+.testimonial__card__customer__description {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.testimonial__card__customer__description__customer-type {
+  color: var(--soft-pink);
+}
+.testimonial__card__review {
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */
