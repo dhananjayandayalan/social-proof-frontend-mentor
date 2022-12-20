@@ -35,7 +35,7 @@ body {
 
 main {
   padding: 8rem 3rem 4rem;
-  min-width: 360px;
+  min-width: 380px;
   text-align: center;
 }
 
@@ -57,9 +57,10 @@ main {
 .ratings {
   padding-bottom: 4rem;
   &__card{
+    max-width: 430px;
     background: var(--text-paragraph-card);
     padding: 1.5rem 0;
-    border-radius: 5px;
+    border-radius: 8px;
     &:not(:last-child) {
       margin-bottom: 2rem;
     }
@@ -81,7 +82,8 @@ main {
 .testimonial {
   &__card {
     background: var(--accent);
-    border-radius: 5px;
+    max-width: 340px;
+    border-radius: 8px;
     padding: 3rem;
     padding-top: 4rem;
     font-size: 1.6rem;
@@ -116,6 +118,81 @@ main {
 
     &__review {
       text-align: left;
+    }
+  }
+}
+
+@media (min-width: 49.98em) {
+  body {
+    background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+    background-position: top left, bottom right;
+  }
+
+  main {
+    padding: unset;
+    display: grid;
+    grid-template-rows: 250px 250px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 8rem;
+    padding-inline: 18rem;
+    padding-top: 10rem;
+  }
+
+  .hero {
+    padding: unset;
+    text-align: left;
+    align-self: center;
+    &__title {
+      font-size: 5.4rem;
+      padding: unset;
+      padding-bottom: 3rem;
+      padding-right: 6rem;
+    }
+    &__description {
+      font-size: 1.8rem;
+      padding-right: 10rem;
+      color: var(--text-paragraph);
+    }
+  }
+
+  .ratings {
+    align-self: center;
+    padding: unset;
+    display: flex;
+    flex-direction: column;
+
+    &__card{
+      padding: unset;
+      display: flex;
+      gap: 3rem;
+      padding: 1.5rem 3rem;
+      &__company {
+        padding: unset;
+        font-size: 1.7rem;
+      }
+
+      &:nth-child(2) {
+        margin-left: 4rem;
+      }
+      &:last-child {
+        margin-left: 8rem;
+      }
+    }
+  }
+
+  .testimonial {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-between;
+
+    &__card {
+      max-height: 220px;
+      &:nth-child(2) {
+        margin-top: 2rem;
+      }
+      &:last-child {
+        margin-top: 4rem;
+      }
     }
   }
 }
